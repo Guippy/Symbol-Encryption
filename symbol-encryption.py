@@ -2,7 +2,7 @@ import string
 import random
 print("welcome to the ECC 2.0")
 types = input("encrypt:1\ndecrypt:2\n")
-word = input("enter a world ")
+word = input("enter a word ")
 
 def encode_decode(words, typess):
     alphabet = string.printable
@@ -30,7 +30,7 @@ def encode_decode(words, typess):
                     index += 1
                 elif letters in negative_symbols:
                     index -= 1
-                elif letters in equal_symbols:
+                else:
                     new_word.append(alphabet[index])
             return "".join(new_word)
 
